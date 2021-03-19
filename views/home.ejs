@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+    <body style="text-align: center;">
+        <h2>Home_page => <%= data.var %></h2>
+
+        <% if(data.loggedin){ %>
+            <h3>you r logged in as : <%= data.username %></h3>
+        <% } %>
+        <ul type=none style="text-align: center;">
+            <% data.arr.forEach(result=>{ %>
+                <li><%= result %></li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
